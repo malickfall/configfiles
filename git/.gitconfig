@@ -1,0 +1,27 @@
+[user]
+	name = yourname
+	email = youremail
+[color]
+	ui = true
+	diff = true
+[color "diff"]
+	meta = blue black bold
+[merge]
+	tool = meld
+[mergetool "meld"]
+    cmd = meld --diff \"$LOCAL\" \"$MERGED\" \"$REMOTE\"
+[mergetool]
+	trustExitCode = false
+#[diff]
+#	tool = meld
+#	external = /home/mfall/diff.py
+[difftool]
+	tool = meld
+#	external = /home/mfall/diff.py
+[core]
+	editor = vi
+	excludesfile = ~/.gitignore
+[alias]
+	slog = log --all --graph --pretty=format:'%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)    %an%Creset' --abbrev-commit
+	lg = log --name-only
+	conflict-files = !git --version | grep -H -r \"<<<<<<< HEAD\"
