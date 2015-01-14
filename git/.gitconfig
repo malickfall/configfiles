@@ -12,12 +12,8 @@
     cmd = meld --diff \"$LOCAL\" \"$MERGED\" \"$REMOTE\"
 [mergetool]
 	trustExitCode = false
-#[diff]
-#	tool = meld
-#	external = /home/mfall/diff.py
 [difftool]
 	tool = meld
-#	external = /home/mfall/diff.py
 [core]
 	editor = vi
 	excludesfile = ~/.gitignore
